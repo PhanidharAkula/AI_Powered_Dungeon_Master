@@ -1,13 +1,11 @@
 {
     "player": {
-        "location": "mystic_lake",
-        "location_history": [
-            "starting_location"
-        ],
-        "hp": 111,
+        "location": "starting_location",
+        "location_history": [],
+        "hp": 120,
         "max_hp": 120,
         "attack": 10,
-        "xp": 20,
+        "xp": 0,
         "level": 1,
         "xp_to_next_level": 75,
         "inventory": [
@@ -18,22 +16,14 @@
                 "description": "A potion that restores 25 HP."
             },
             {
-                "name": "dagger",
-                "type": "weapon",
-                "attack_boost": 8,
-                "description": "A small but sharp dagger."
+                "name": "silver_key",
+                "type": "key",
+                "description": "A shiny silver key with intricate engravings."
             },
             {
-                "name": "mystic_gem",
-                "type": "healing",
-                "healing_amount": 100,
-                "description": "A gem with mystic energy, rumored to provide full health recovery."
-            },
-            {
-                "name": "potion",
-                "type": "healing",
-                "healing_amount": 15,
-                "description": "Restores health."
+                "name": "torch",
+                "type": "tool",
+                "description": "A torch that helps find hidden items."
             }
         ]
     },
@@ -48,7 +38,7 @@
         },
         "find_mystic_gem": {
             "description": "Locate the Mystic Gem concealed in the Crystal Caves.",
-            "completed": true,
+            "completed": false,
             "required_items": [
                 "mystic_gem"
             ],
@@ -68,10 +58,10 @@
             "description": "A peaceful village surrounded by lush forests and rolling hills.",
             "npcs": {
                 "village_elder": {
-                    "hp": 0,
+                    "hp": 50,
                     "max_hp": 50,
                     "attack": 5,
-                    "status": "defeated"
+                    "status": "active"
                 },
                 "blacksmith": {
                     "hp": 60,
@@ -86,7 +76,23 @@
                     "status": "active"
                 }
             },
-            "items": {},
+            "items": {
+                "healing_potion": {
+                    "type": "healing",
+                    "healing_amount": 25,
+                    "description": "A potion that restores 25 HP."
+                },
+                "silver_key": {
+                    "type": "key",
+                    "description": "A shiny silver key with intricate engravings."
+                },
+                "dagger": {
+                    "name": "dagger",
+                    "type": "weapon",
+                    "attack_boost": 8,
+                    "description": "A small but sharp dagger."
+                }
+            },
             "connections": {
                 "north": "dark_forest",
                 "east": "mystic_lake",
@@ -148,6 +154,11 @@
             "description": "A serene, mystical lake shimmering under the moonlight.",
             "npcs": {},
             "items": {
+                "mystic_gem": {
+                    "type": "healing",
+                    "healing_amount": 100,
+                    "description": "A gem with mystic energy, rumored to provide full health recovery."
+                },
                 "golden_key": {
                     "type": "key",
                     "description": "A golden key, it might unlock something important."
@@ -161,8 +172,7 @@
                 "north": true
             },
             "hidden_items": {},
-            "traps": {},
-            "generated_description": "In the heart of the ancient forest, under the luminescent glow of the full moon, there lies a serene, mystical lake. It shimmers like a silver mirror, reflecting the star-studded night sky, bringing the heavens closer to the earth. The whisper of the wind through the trees is the only sound that dares to disturb the peaceful silence. The air around the lake is tinged with an inexplicable magic, a sense of peace and tranquility that seems to seep into your very soul. Every ripple on the water's surface seems like a secret, a story waiting to be told.\n\nThe moonlit lake, cradled in the forest's embrace, is a spectacle of ethereal beauty. Its calm, shimmering surface brings a sense of tranquility that tugs at your soul. This is a place where the mundane world meets the mystical, and you cannot help but feel a part of something greater."
+            "traps": {}
         },
         "cursed_castle": {
             "description": "A foreboding castle, home of the Shadow Lord. Beware of the curse!",
